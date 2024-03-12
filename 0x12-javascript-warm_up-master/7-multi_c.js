@@ -1,9 +1,16 @@
 #!/usr/bin/node
-const x = process.argv[2];
-if (isNaN(x)) {
-  console.log('Missing number of occurrences');
-} else {
-  for (let i = 0; i < x; i++) {
-    console.log('C is fun');
+/*
+Prints a string n times.
+.
+ */
+function nPrint (n, txt) {
+  if (Number.isNaN(n)) {
+    console.log('Missing number of occurrences');
+  } else if (n >= 0) {
+    for (let i = 0; i < n; i++) {
+      console.log(txt);
+    }
   }
-}
+};
+
+nPrint(Number.parseInt(process.argv[2]), 'C is fun');
